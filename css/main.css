@@ -1,33 +1,56 @@
 body {
     text-align: center;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
 .display-box {
     margin-top: 20px;
+    margin-bottom: 10px;
     border: 3px solid black;
     width: 200px;
+    padding: 10px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
+/* .mines-counter {
+    left: 0px;
+    display: inline;
+    
+    margin-left: 0px;
+    width: 30px;
+}
 
+.seconds {
+    margin-right: 0px;
+    display: inline;
+    position: absolute;
+    width: 30px;
+} */
+
+.restart {
+    margin-left: 50px;
+    margin-right: 50px;
+}
 
 table {
     text-align: center;
-    border: 3px solid black;
+    border: 15px ridge lightsteelblue;
+    /* border-style: ridge; */
     margin-left: auto;
     margin-right: auto;
-
+    border-spacing: 0px
 }
 
 .board td {
-    width: 30px;
-    height: 30px;
-
+    width: 40px;
+    height: 40px;
     text-align: center;
-    background-color: grey;
-    padding: 5px;
-    margin: 20px;
+    background-color: lightsteelblue;
+    border: 5px;
+    border-style: outset;
+    box-sizing: border-box;
 }

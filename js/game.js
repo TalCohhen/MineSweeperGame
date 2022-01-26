@@ -1,5 +1,4 @@
 'use strict'
-console.log('HELLO');
 
 const MINE = '💣';
 const FLAG = '🚩';
@@ -26,15 +25,14 @@ function initGame() {
         SIZE: 16,
         MINES: 2
     };
-    gBoard = buildBoard()
+    gBoard = buildBoard();
     console.table(gBoard);
     renderBoard();
 }
 
 function chooseLevel(boardSize) {
     gLevel.SIZE = boardSize;
-
-    switch (boardSize) {
+    switch (gLevel.SIZE) {
         case 16:
             gLevel.MINES = 2;
             break;
@@ -45,8 +43,8 @@ function chooseLevel(boardSize) {
             gLevel.MINES = 30;
             break;
     }
-    buildBoard();
-
+    gBoard = buildBoard();
+    renderBoard();
 }
 
 
@@ -66,7 +64,6 @@ function buildBoard() {
         };
 
     }
-
     board[0][2].isMine = true;
     board[2][1].isMine = true;
 
@@ -80,7 +77,9 @@ function renderBoard() {
         for (var j = 0; j < gBoard[0].length; j++) {
             var currCell = gBoard[i][j];
 
-            strHTML += `<td onclick="cellClicked(this, ${i}, ${j})" >${''}</td>`;
+            // if (currCell.isMine)
+
+            strHTML += `<td onclick="cellClicked(this, ${i}, ${j})">${''}</td>`;
         }
         strHTML += '</tr>';
     }
@@ -88,15 +87,17 @@ function renderBoard() {
     elBoard.innerHTML = strHTML;
 }
 
-
-
-
 // function setMinesNegsCount(board)
 
 // function renderBoard(board)
 
 function cellClicked(elCell, i, j) {
-    var cell = gCinema[i][j];
+    // var cellPos = gBoard[i][j];
+    console.log('clicked....');
+    console.log(gBoard[i][j]);
+    console.log(elCell);
+
+
 }
 
 // function cellMarked(elCell)
