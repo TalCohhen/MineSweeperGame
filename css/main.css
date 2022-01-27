@@ -1,39 +1,46 @@
 body {
     text-align: center;
-    background-image: url();
+    background-image: url(/img/blast.jfif);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+
 }
 
+h1 {
+    color: white;
+}
 
 .display-box {
     margin-top: 20px;
     margin-bottom: 10px;
     border: 3px solid black;
-    width: 200px;
+    width: 300px;
+    height: 35px;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* .mines-counter {
-    left: 0px;
-    display: inline;
-    
-    margin-left: 0px;
-    width: 30px;
+.mines-counter {
+    font-size: 25px;
+    border: 5px ridge lightsteelblue;
+    color: greenyellow;
+    background-color: black;
+    padding: 3px;
 }
 
-.seconds {
-    margin-right: 0px;
-    display: inline;
-    position: absolute;
-    width: 30px;
-} */
+.time {
+    font-size: 25px;
+    border: 5px ridge lightsteelblue;
+    color: greenyellow;
+    background-color: black;
+    padding: 3px;
+}
 
 .restart {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 25px;
 }
 
 table {
@@ -45,7 +52,7 @@ table {
     border-spacing: 0px
 }
 
-.board td {
+td {
     width: 40px;
     height: 40px;
     text-align: center;
@@ -54,3 +61,15 @@ table {
     border-style: outset;
     box-sizing: border-box;
 }
+
+.shown {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(177, 177, 177);
+}
+
+/* border: 5px;
+    border-style: outset;
+    box-sizing: border-box; */
+/* } */
